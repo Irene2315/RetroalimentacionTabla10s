@@ -11,7 +11,11 @@ class Producto extends Model
 
     protected $fillable = [
         'nombre',
-        'descripcion',
-        'cantidad'
+        'descripcion'
     ];
+
+    public function cantidadProducto(){
+        return $this->hasMany(CantidadProducto::class);
+        
+    }
 }
