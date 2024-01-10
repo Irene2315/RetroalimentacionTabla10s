@@ -13,6 +13,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // $schedule->command('inspire')->hourly();
+        //$schedule->command('actualizar:valores')->everyMinute();
+        $schedule->exec('./vendor/bin/sail artisan actualizar:valores')->everyMinute();
     }
 
     /**
